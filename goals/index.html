@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <link href="./assets/main.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <title>Vite App</title>
+    </head>
+    <body>
+        <div id="app">
+            <div class="card">
+                <h1 class="card-title">{{ name }}</h1>
+                <hr />
+                <div class="card-field__red">
+                    <h3>{{ age }}</h3>
+                </div>
+                <div class="card-field__red">
+                    <h3>{{ newAge(5) }}</h3>
+                </div>
+                <div class="card-field__red">
+                    <h3>Favorite number: {{ random() }}</h3>
+                </div>
+                <img v-bind:src="imgUrl" alt="pic" />
+                <input type="text" v-bind:value="inputValue" />
+            </div>
+        </div>
+        <script src="./src/main.js"></script>
+    </body>
+</html>
