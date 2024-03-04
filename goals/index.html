@@ -11,7 +11,22 @@
     <body>
         <div id="app">
             <div class="card">
-                <h1 class="card-title">{{ name }}</h1>
+                <div>
+                    <label>My name</label>
+                    <input 
+                        id="name" 
+                        name="name" 
+                        type="text" 
+                        v-on:input="setName($event, 'Bajtek')" 
+                        v-on:keyup.enter="confirmInput"
+                        />
+                </div>
+                <h1 class="card-title">{{ confirmName }}</h1>
+               
+                <div>
+                    <button v-on:click="add(10)">Age</button>
+                    <button v-on:click="reduce(10)">Reduce</button>
+                </div>
                 <hr />
                 <div class="card-field__red">
                     <h3>{{ age }}</h3>
