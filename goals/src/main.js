@@ -31,7 +31,7 @@ Vue.createApp({
         },
 
         reduce(age) {
-            this.age = this.age - age
-        }
+            this.age = this.age - age;
+        },
     },
 }).mount("#app");
