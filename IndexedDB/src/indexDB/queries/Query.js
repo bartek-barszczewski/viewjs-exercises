@@ -1,4 +1,4 @@
-export default class CommandSet {
+export class QuerySet {
     constructor() {}
 
     createStore() {
@@ -117,6 +117,11 @@ export default class CommandSet {
                     } else {
                         console.log(objectKeys);
                         console.log(fromTableObjectKeys);
+                        /*
+                            On the basis of to pass the object with keys 
+                            you should delete the record from 
+                            the specific table
+                        */
                     }
                 };
             } else {
@@ -200,5 +205,13 @@ export default class CommandSet {
 
             console.log(store);
         };
+    }
+}
+
+export class Query extends QuerySet {
+    constructor(query, ctx) {
+        super();
+        this.ctx = ctx;
+        this.query = query;
     }
 }
